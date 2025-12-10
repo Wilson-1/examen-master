@@ -29,6 +29,6 @@ export class UserController {
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.userService.update(+id, updateUserDto);
+    return this.userService.remove(+id);
   }
 }

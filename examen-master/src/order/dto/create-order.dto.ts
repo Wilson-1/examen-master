@@ -1,5 +1,7 @@
 export class CreateOrderDto {
-    readonly productId: number;
-    readonly quantity: number;
-    readonly customerId: number;
+  owner: string;
+  product: string;
+  quantity_product: number;
+  total: number;
+  time_exit?: Date;
 }
