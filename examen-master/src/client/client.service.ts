@@ -1,10 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { CreateClientDto } from './dto/create-client.dto';
 import { UpdateClientDto } from './dto/update-client.dto';
+import { PrismaService } from '../prisma/prisma.service';
 
 
 @Injectable()
 export class ClientService {
+
+  constructor(private readonly prisma: PrismaService) {}
 
 
   create(createClientDto: CreateClientDto) {

@@ -5,9 +5,11 @@ import { PrismaService } from '../prisma/prisma.service';
 
 @Injectable()
 export class UserService {
+  
+  constructor(private readonly prisma: PrismaService) {}
 
   create(createUserDto: CreateUserDto) {
-    return this.prisma.user.create({data:createUserDto})
+    return this.prisma.user.create({ data: createUserDto });
   }
 
   findAll() {
